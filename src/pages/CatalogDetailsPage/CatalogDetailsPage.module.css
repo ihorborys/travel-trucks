@@ -1,13 +1,25 @@
-ul, li, p {
-    all: unset;
-}
-
 .container {
     margin: 0 auto;
     max-width: 320px;
-    padding: 0 40px;
+    padding: 0 32px;
 }
 
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 64px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+ul, li, p {
+    all: unset;
+}
 
 .imageInfoWrapper {
     display: flex;

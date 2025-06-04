@@ -2,7 +2,7 @@ import { Field, Form, Formik } from "formik";
 import { useEffect, useState } from "react";
 import { getMovies } from "../../api/api.js";
 import styles from "./CatalogPage.module.css";
-import MovieList from "../../components/MovieList/MovieList.jsx";
+import CampersList from "../../components/CampersList/CampersList.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage.jsx";
 import { useSearchParams } from "react-router-dom";
@@ -66,7 +66,7 @@ const CatalogPage = () => {
           </div>
         </Form>
       </Formik>
-      <MovieList movies={movies} />
+      <CampersList movies={movies} />
       {loading && <Loader />}
       {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
     </div>

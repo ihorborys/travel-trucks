@@ -1,15 +1,15 @@
-import styles from "./MovieList.module.css";
+import styles from "./CampersList.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { defaultImg, profileUrl } from "../../api/api.js";
 
-const MovieList = ({ movies }) => {
+const CampersList = ({ movies }) => {
   const location = useLocation();
   return (
     <ul className={styles.list}>
       {movies.map((movie) => (
         <li key={movie.id} className={styles.item}>
           <Link
-            to={`/movies/${movie.id}`}
+            to={`/catalog/${movie.id}`}
             className={styles.link}
             state={location}
           >
@@ -32,4 +32,4 @@ const MovieList = ({ movies }) => {
   );
 };
 
-export default MovieList;
+export default CampersList;

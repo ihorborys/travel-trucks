@@ -9,9 +9,7 @@ const CatalogDetailsPage = lazy(
   () => import("./pages/CatalogDetailsPage/CatalogDetailsPage.jsx"),
 );
 const Features = lazy(() => import("./components/Cast/Cast.jsx"));
-const Reviews = lazy(
-  () => import("./components/Reviews/Reviews.jsx"),
-);
+const Reviews = lazy(() => import("./components/Reviews/Reviews.jsx"));
 const NotFoundPage = lazy(
   () => import("./pages/NotFoundPage/NotFoundPage.jsx"),
 );
@@ -20,7 +18,8 @@ const CatalogLayout = lazy(
   () => import("./layouts/CatalogLayout/CatalogLayout.jsx"),
 );
 const CatalogDetailsPageLayout = lazy(
-  () => import("./layouts/CatalogDetailsPageLayout/CatalogDetailsPageLayout.jsx"),
+  () =>
+    import("./layouts/CatalogDetailsPageLayout/CatalogDetailsPageLayout.jsx"),
 );
 
 function App() {

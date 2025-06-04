@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
-    font-family: system-ui, Montserrat, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
-    background-color: lightgrey;
+
+    --colors-primary: #101828; /* Primary text color */
+    --colors-grey: #475467;
+    --colors-secondary-grey: #6C717B;
+    --colors-button: #D84343;
+    --colors-button-hover: #E44848;
+    --colors-yellow: #FFC531;
+    --colors-white-1: #DADDE1;
+    --colors-white-2: #F2F4F7;
+    --colors-white-3: #F7F7F7;
+    --colors-white: #FFFFFF;
 }
 
 a {

@@ -37,7 +37,7 @@ export const CatalogDetailsPage = () => {
     fetchData();
   }, [movieId]);
 
-  const backLink = useRef(location.state ?? "/movies");
+  const backLink = useRef(location.state ?? "/catalog");
 
   const handleClick = () => {
     if (backLink.current) navigate(backLink.current);

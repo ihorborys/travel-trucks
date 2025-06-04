@@ -9,7 +9,7 @@ const CatalogDetailsPageNav = () => {
   return (
     <ul className={styles.navigationList}>
       <li className={styles.navigationItem}>
-        <NavLink to="features" className={navClasses}>
+        <NavLink to="/features" className={navClasses}>
           Cast
         </NavLink>
       </li>

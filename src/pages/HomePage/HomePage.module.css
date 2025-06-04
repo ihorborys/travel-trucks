@@ -1,6 +1,25 @@
+/*.container {*/
+/*    border-left: 1px solid teal;*/
+/*    border-bottom: 1px solid teal;*/
+/*}*/
+
 .container {
-    border-left: 1px solid teal;
-    border-bottom: 1px solid teal;
+    margin: 0 auto;
+    max-width: 320px;
+    padding: 0 32px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 64px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
 }
 
 .title {
