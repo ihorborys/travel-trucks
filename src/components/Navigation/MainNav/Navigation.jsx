@@ -11,15 +11,19 @@ const Navigation = () => {
       <ul className={styles.navigationList}>
         <li className={styles.navigationLogo}>
           <NavLink to="/" className={styles.navigationLogoLink}>
-            Travel<span className={styles.navigationIcon}>Trucks</span>
+            <svg className={styles.navigationIcon} width="136" height="16">
+              <use href="./src/assets/icons/logo.svg"></use>
+            </svg>
           </NavLink>
         </li>
-        <li className={styles.navigationItem}>
-          <NavLink to="/" className={navClasses}>
-            Home
-          </NavLink>
-        </li>
-        <li className={styles.navigationItem}>
+        <li className={styles.navigationItemContainer}>
+          <li className={styles.navigationItem}>
+            <NavLink to="/" className={navClasses}>
+              Home
+            </NavLink>
+          </li>
+          <li className={styles.navigationItem}></li>
+
           <NavLink to="/catalog" className={navClasses}>
             Catalog
           </NavLink>
