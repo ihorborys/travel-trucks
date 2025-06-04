@@ -13,7 +13,7 @@ const Navigation = () => {
           <li className={styles.navigationLogo}>
             <NavLink to="/" className={styles.navigationLogoLink}>
               <svg className={styles.navigationIcon} width="136" height="16">
-                <use href="./public/assets/icons/logo.svg"></use>
+                <use href="/assets/icons/logo.svg"></use>
               </svg>
             </NavLink>
           </li>
