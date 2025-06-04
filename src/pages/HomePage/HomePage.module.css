@@ -1,5 +1,5 @@
 .sectionHero {
-    background-image: url('./src/assets/img/hero.webp');
+    background-image: url('./public/assets/img/hero.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 /* Retina (2x) */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .sectionHero {
-        background-image: url('./src/assets/img/hero@2x.webp');
+        background-image: url('./public/assets/img/hero@2x.webp');
     }
 }
 
