@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import Loader from "./components/Loader/Loader.jsx";
+
+const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
+const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage.jsx"));
+const CatalogDetailsPage = lazy(
+  () => import("./pages/CatalogDetailsPage/CatalogDetailsPage.jsx"),
+);
+const Features = lazy(() => import("./components/Cast/Cast.jsx"));
+const Reviews = lazy(
+  () => import("./components/Reviews/Reviews.jsx"),
+);
+const NotFoundPage = lazy(
+  () => import("./pages/NotFoundPage/NotFoundPage.jsx"),
+);
+const HomeLayout = lazy(() => import("./layouts/HomeLayout/HomeLayout.jsx"));
+const CatalogLayout = lazy(
+  () => import("./layouts/CatalogLayout/CatalogLayout.jsx"),
+);
+const CatalogDetailsPageLayout = lazy(
+  () => import("./layouts/CatalogDetailsPageLayout/CatalogDetailsPageLayout.jsx"),
+);
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path={"/"} element={<HomeLayout />}>
+            <Route index element={<HomePage />}></Route>
+          </Route>
+          <Route path={"/catalog"} element={<CatalogLayout />}>
+            <Route path={"/catalog"} element={<CatalogPage />}></Route>
+          </Route>
+          <Route path={"/catalog/:id"} element={<CatalogDetailsPageLayout />}>
+            <Route path={"/catalog/:id"} element={<CatalogDetailsPage />}>
+              <Route path="features" element={<Features />} />
+              <Route path="reviews" element={<Reviews />} />
+            </Route>
+          </Route>
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
+    </div>
+  );
 }
 
-export default App
+export default App;

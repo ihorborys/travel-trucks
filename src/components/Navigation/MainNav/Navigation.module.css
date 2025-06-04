@@ -1,0 +1,33 @@
+.navigationList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 40px 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.active {
+    color: teal;
+    text-decoration: underline;
+}
+
+.navigationItem {
+    list-style: none;
+}
+
+.navigationItem:hover {
+    color: teal;
+    text-decoration: underline 1px;
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+    .navigationList {
+        padding: 20px 60px;
+    }
+
+}
