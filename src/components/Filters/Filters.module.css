@@ -1,0 +1,6 @@
+.catalogFiltersLocation, .catalogFiltersEquipment, .catalogFiltersType {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

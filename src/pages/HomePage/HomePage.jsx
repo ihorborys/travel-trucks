@@ -1,9 +1,6 @@
 import styles from "./HomePage.module.css";
 import Button from "../../components/Button/Button.jsx";
-// import heroWebp from "../../assets/img/hero.webp";
-// import heroWebp2x from "../../assets/img/hero@2x.webp";
-// import heroPng from "../../assets/img/hero.png";
-// import heroPng2x from "../../assets/img/hero@2x.png";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -14,7 +11,9 @@ const HomePage = () => {
           <h3 className={styles.heroSubTitle}>
             You can find everything you want in our catalog
           </h3>
-          <Button>View Now</Button>
+          <Link to="/catalog">
+            <Button>View Now</Button>
+          </Link>
         </div>
       </div>
     </section>

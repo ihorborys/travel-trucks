@@ -17,60 +17,75 @@
     }
 }
 
-.form {
-    margin-bottom: 40px;
+.catalogPageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.formWrapper {
+.catalogFilters {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-}
-
-.input {
-    padding: 20px 80px;
-    text-align: center;
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-input:focus {
-    border: 1px solid teal;
-    outline: none; /* Видаляє стандартний контур браузера */
+    min-width: 360px;
 }
 
 
-.button {
-    padding: 20px 40px;
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
+/*.form {*/
+/*    margin-bottom: 40px;*/
+/*}*/
 
-.button:hover {
-    background-color: teal;
-    transition: background-color 0.3s ease;
-}
+/*.formWrapper {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    gap: 20px;*/
+/*}*/
 
-@media screen and (min-width: 768px) {
-    .formWrapper {
-        flex-direction: row;
-    }
-}
+/*.input {*/
+/*    padding: 20px 80px;*/
+/*    text-align: center;*/
+/*    font-family: Montserrat, sans-serif;*/
+/*    font-size: 20px;*/
+/*    border: none;*/
+/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+/*}*/
 
-@media screen and (max-width: 768px) {
-    .input {
-        padding: 10px 40px;
-    }
+/*input:focus {*/
+/*    border: 1px solid teal;*/
+/*    outline: none; !* Видаляє стандартний контур браузера *!*/
+/*}*/
 
-    .button {
-        padding: 10px 20px;
-    }
-}
+
+/*.button {*/
+/*    padding: 20px 40px;*/
+/*    font-family: Montserrat, sans-serif;*/
+/*    font-size: 20px;*/
+/*    cursor: pointer;*/
+/*    border: none;*/
+/*    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+/*    transition: background-color 0.3s ease;*/
+/*}*/
+
+/*.button:hover {*/
+/*    background-color: teal;*/
+/*    transition: background-color 0.3s ease;*/
+/*}*/
+
+/*@media screen and (min-width: 768px) {*/
+/*    .formWrapper {*/
+/*        flex-direction: row;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 768px) {*/
+/*    .input {*/
+/*        padding: 10px 40px;*/
+/*    }*/
+
+/*    .button {*/
+/*        padding: 10px 20px;*/
+/*    }*/
+/*}*/
