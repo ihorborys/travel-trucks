@@ -8,7 +8,7 @@ const navClasses = ({ isActive }) => {
 const Navigation = () => {
   return (
     <section className={styles.sectionNavigation}>
-      <div className={styles.navigationContainer}>
+      <nav className={styles.navigationContainer}>
         <ul className={styles.navigationList}>
           <li className={styles.navigationLogo}>
             <NavLink to="/" className={styles.navigationLogoLink}>
@@ -32,7 +32,7 @@ const Navigation = () => {
             </ul>
           </li>
         </ul>
-      </div>
+      </nav>
     </section>
   );
 };
