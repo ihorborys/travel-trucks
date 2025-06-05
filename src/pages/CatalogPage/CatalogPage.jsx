@@ -48,24 +48,35 @@ const CatalogPage = () => {
   };
 
   return (
-    <div className={styles.moviePageWrapper}>
-      <Formik initialValues={{ query: "" }} onSubmit={handleSubmit}>
-        <Form className={styles.form}>
-          <div className={styles.formWrapper}>
-            <Field
-              name="query"
-              className={styles.input}
-              type="text"
-              autoComplete="off"
-              autoFocus
-              placeholder="Search movies"
-            ></Field>
-            <button className={styles.button} type="submit">
-              Search
-            </button>
-          </div>
-        </Form>
-      </Formik>
+    <div className={styles.catalogPageWrapper}>
+      <section className={styles.catalogFilters}>
+        <ul className={styles.catalogFiltersLocation}>
+          <title>Location</title>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul className={styles.catalogFiltersEquipment}>
+          <title>Vehicle equipment</title>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul className={styles.catalogFiltersType}>
+          <title>Location</title>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <button></button>
+      </section>
+      <section className={styles.catalogList}></section>
       <CampersList movies={movies} />
       {loading && <Loader />}
       {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
