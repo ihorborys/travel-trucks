@@ -1,8 +1,6 @@
-import styles from "./Button.module.css";
-
-const Button = ({ handleOnClick, children }) => {
+const Button = ({ handleOnClick, className, children }) => {
   return (
-    <button className={styles.heroButton} onClick={handleOnClick}>
+    <button className={className} onClick={handleOnClick}>
       {children}
     </button>
   );

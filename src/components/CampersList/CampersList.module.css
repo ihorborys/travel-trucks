@@ -3,9 +3,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /*gap: 40px;*/
-    /*margin: 40px 0;*/
-    /*min-width: 100%;*/
 }
 
 .item {
@@ -15,34 +12,12 @@
     align-items: center;
 }
 
+
 .camperInfoContainer {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     padding: 24px;
-
-}
-
-.camperInfoList {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    min-width: 524px;
-}
-
-.namePriceFavoriteWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 8px;
-
-    color: var(--colors-primary);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.33;
 }
 
 .image {
@@ -50,53 +25,32 @@
     margin-right: 24px;
 }
 
-.name {
-    font-size: 24px;
+.camperInfoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 524px;
+    height: 320px;
+}
+
+
+.showMoreBtn {
+    border-radius: 200px;
+    padding: 16px 48px;
+    background-color: var(--colors-button);
+    color: var(--colors-white);
     font-style: normal;
-    font-weight: 600;
-    line-height: 1.33;
+    font-weight: 500;
+    line-height: 1.50;
+    letter-spacing: -0.08px;
+    cursor: pointer;
+    margin-top: auto;
 }
 
-.priceFavorite {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
+.showMoreBtn:hover {
+    background-color: var(--colors-button-hover);
 }
-
-.ratingLocationWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.favorite {
-    margin-right: 4px;
-}
-
-.map {
-    margin: 0 4px 0 16px;
-}
-
-/*.link {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    text-align: center;*/
-/*}*/
-
-/*.link:hover {*/
-/*    opacity: 0.6;*/
-/*    color: teal;*/
-/*}*/
-
-
-/*.title {*/
-/*    font-weight: 500;*/
-/*    width: 185px;*/
-/*    height: 60px;*/
-/*}*/
 
 @media screen and (max-width: 768px) {
     .image {
