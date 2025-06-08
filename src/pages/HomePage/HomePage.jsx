@@ -12,7 +12,7 @@ const HomePage = () => {
             You can find everything you want in our catalog
           </h3>
           <Link to="/catalog">
-            <Button className={styles.heroBtn}>View Now</Button>
+            <Button>View Now</Button>
           </Link>
         </div>
       </div>

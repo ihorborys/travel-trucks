@@ -1,0 +1,74 @@
+.bookFormWrapper {
+    border: 1px solid var(--colors-white-1);
+    border-radius: 10px;
+    padding: 44px 57px;
+}
+
+.bookFormTitles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.bookFormTitle {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.bookFormSubtitle {
+    color: var(--colors-secondary-grey);
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+}
+
+.field {
+    padding: 18px;
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--colors-white-titles);
+    box-sizing: border-box;
+}
+
+.datePickerField {
+    min-width: 100%;
+}
+
+.datePickerField {
+    min-width: 100%;
+}
+
+.textarea {
+    height: 118px;
+    resize: vertical;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}

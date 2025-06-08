@@ -10,7 +10,7 @@ const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage.jsx"));
 const CatalogDetailsPage = lazy(
   () => import("./pages/CatalogDetailsPage/CatalogDetailsPage.jsx"),
 );
-const Features = lazy(() => import("./components/Cast/Cast.jsx"));
+const Features = lazy(() => import("./components/Features/Features.jsx"));
 const Reviews = lazy(() => import("./components/Reviews/Reviews.jsx"));
 const NotFoundPage = lazy(
   () => import("./pages/NotFoundPage/NotFoundPage.jsx"),
@@ -40,8 +40,8 @@ function App() {
             element={<CatalogDetailsPageLayout />}
           >
             <Route path={"/catalog/:camperId"} element={<CatalogDetailsPage />}>
-              <Route path="features" element={<Features />} />
-              <Route path="reviews" element={<Reviews />} />
+              <Route path={"features"} element={<Features />} />
+              <Route path={"reviews"} element={<Reviews />} />
             </Route>
           </Route>
           <Route path="*" element={<NotFoundPage />} />

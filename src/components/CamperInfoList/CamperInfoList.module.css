@@ -46,3 +46,8 @@
 .descriptionWrapper {
     margin: 24px 0;
 }
+
+.description {
+    color: var(--colors-grey);
+    line-height: 1.5;
+}
