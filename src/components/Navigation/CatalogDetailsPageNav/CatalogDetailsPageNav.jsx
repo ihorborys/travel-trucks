@@ -10,7 +10,7 @@ const CatalogDetailsPageNav = () => {
     <ul className={styles.navigationList}>
       <li className={styles.navigationItem}>
         <NavLink to="/features" className={navClasses}>
-          Cast
+          Features
         </NavLink>
       </li>
       <li className={styles.navigationItem}>

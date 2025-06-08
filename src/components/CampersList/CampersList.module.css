@@ -25,31 +25,13 @@
     margin-right: 24px;
 }
 
-.camperInfoList {
+.camperInfoWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     width: 524px;
     height: 320px;
-}
-
-
-.showMoreBtn {
-    border-radius: 200px;
-    padding: 16px 48px;
-    background-color: var(--colors-button);
-    color: var(--colors-white);
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.50;
-    letter-spacing: -0.08px;
-    cursor: pointer;
-    margin-top: auto;
-}
-
-.showMoreBtn:hover {
-    background-color: var(--colors-button-hover);
 }
 
 @media screen and (max-width: 768px) {

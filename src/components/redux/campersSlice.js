@@ -1,9 +1,10 @@
-import { fetchCampers } from "./campersOps.js";
+import { fetchCampers, getSelectedCamper } from "./campersOps.js";
 import { createSelector, createSlice } from "@reduxjs/toolkit";
 // import { selectNameFilter } from "./filtersSlice.js";
 
 const initialState = {
   items: [],
+  item: null,
   loading: false,
   error: null,
 };
@@ -23,14 +24,27 @@ const campersSlice = createSlice({
       .addCase(fetchCampers.rejected, (state, { payload }) => {
         state.error = payload;
         state.loading = false;
+      })
+      .addCase(getSelectedCamper.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getSelectedCamper.fulfilled, (state, { payload }) => {
+        state.item = payload;
+        console.log(state.item);
+        console.log(payload);
+        state.loading = false;
+      })
+      .addCase(getSelectedCamper.rejected, (state, { payload }) => {
+        state.error = payload;
+        state.loading = false;
       });
   },
 });
 
 export const selectCampers = (state) => state.campers.items;
-
-// export const selectLoading = (state) => state.campers.loading;
-// export const selectError = (state) => state.campers.error;
+export const selectCamper = (state) => state.campers.item;
+export const selectLoading = (state) => state.campers.loading;
+export const selectError = (state) => state.campers.error;
 
 // export const selectFilteredCampers = createSelector(
 //   [selectCampers, selectEquipmentName],

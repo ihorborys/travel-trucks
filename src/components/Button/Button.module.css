@@ -1,0 +1,15 @@
+.container {
+    border-radius: 200px;
+    padding: 16px 48px;
+    background-color: var(--colors-button);
+    color: var(--colors-white);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.50;
+    letter-spacing: -0.08px;
+    cursor: pointer;
+}
+
+.container:hover {
+    background-color: var(--colors-button-hover);
+}
