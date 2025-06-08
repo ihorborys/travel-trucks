@@ -20,21 +20,59 @@
 .catalogPageWrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    margin-top: 48px;
 }
+
+.catalogFiltersContainer {
+
+}
+
 
 .catalogFilters {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-width: 360px;
+    margin-right: 64px;
+}
+
+.searchBtn {
+    border-radius: 200px;
+    padding: 16px 48px;
+    background-color: var(--colors-button);
+    color: var(--colors-white);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.50;
+    letter-spacing: -0.08px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.searchBtn:hover {
+    background-color: var(--colors-button-hover);
 }
 
 .catalogList {
-    min-width: 840px;
+    /*width: 840px;*/
 }
 
-.name {
 
+.catalogContainer {
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+@media screen and (min-width: 360px) {
+}
+
+@media screen and (min-width: 768px) {
+    .catalogContainer {
+        padding: 0 64px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
 }

@@ -1,6 +1,5 @@
-// import { createSelector, createSlice } from "@reduxjs/toolkit";
 import { fetchCampers } from "./campersOps.js";
-import { createSlice } from "@reduxjs/toolkit";
+import { createSelector, createSlice } from "@reduxjs/toolkit";
 // import { selectNameFilter } from "./filtersSlice.js";
 
 const initialState = {
@@ -10,7 +9,7 @@ const initialState = {
 };
 
 const campersSlice = createSlice({
-  name: "contacts",
+  name: "campers",
   initialState,
   extraReducers: (builder) => {
     builder
@@ -29,13 +28,16 @@ const campersSlice = createSlice({
 });
 
 export const selectCampers = (state) => state.campers.items;
+
 // export const selectLoading = (state) => state.campers.loading;
 // export const selectError = (state) => state.campers.error;
 
 // export const selectFilteredCampers = createSelector(
-//   [selectCampers],
-//   (campers) => {
-//     return campers;
+//   [selectCampers, selectEquipmentName],
+//   (campers, filter) => {
+//     return campers.filter((camper) =>
+//       camper.name.toLowerCase().includes(filter.toLowerCase()),
+//     );
 //   },
 // );
 

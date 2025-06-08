@@ -8,6 +8,8 @@ import EquipmentsList from "../EquipmentsList/EquipmentsList.jsx";
 import CamperInfoList from "../CamperInfoList/CamperInfoList.jsx";
 
 const CampersList = () => {
+  // const searchedCampers = useSelector(selectFilteredCampers);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,7 +17,7 @@ const CampersList = () => {
   }, [dispatch]);
 
   const campers = useSelector(selectCampers);
-
+  console.log(campers);
   return (
     <ul className={styles.list}>
       {campers.map((camper) => (
