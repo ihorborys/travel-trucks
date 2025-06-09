@@ -38,7 +38,6 @@ const FeedbackSchema = Yup.object().shape({
 
 const BookForm = () => {
   const handleSubmit = (values, { resetForm }) => {
-    console.log("Form data:", values);
     toast.success("Booking successful!");
     resetForm();
   };

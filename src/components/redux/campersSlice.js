@@ -5,6 +5,9 @@ import { createSelector, createSlice } from "@reduxjs/toolkit";
 const initialState = {
   items: [],
   item: null,
+  currentPage: 1,
+  limit: 4,
+  totalPages: null,
   loading: false,
   error: null,
 };
@@ -12,13 +15,26 @@ const initialState = {
 const campersSlice = createSlice({
   name: "campers",
   initialState,
+  reducers: {
+    setPage(state, action) {
+      state.currentPage = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCampers.pending, (state) => {
         state.loading = true;
       })
       .addCase(fetchCampers.fulfilled, (state, { payload }) => {
-        state.items = payload.items;
+        const totalItems = payload.total;
+
+        if (state.currentPage === 1) {
+          state.items = payload.items; // при першому запиті — замінюємо
+        } else {
+          state.items = [...state.items, ...payload.items]; // додаємо нові
+        }
+
+        state.totalPages = Math.ceil(totalItems / state.limit);
         state.loading = false;
       })
       .addCase(fetchCampers.rejected, (state, { payload }) => {
@@ -41,8 +57,14 @@ const campersSlice = createSlice({
   },
 });
 
+export const { setPage } = campersSlice.actions;
+
 export const selectCampers = (state) => state.campers.items;
 export const selectCamper = (state) => state.campers.item;
+
+export const selectCurrentPage = (state) => state.campers.currentPage;
+export const selectLimit = (state) => state.campers.limit;
+
 export const selectLoading = (state) => state.campers.loading;
 export const selectError = (state) => state.campers.error;
 
@@ -55,4 +77,5 @@ export const selectError = (state) => state.campers.error;
 //   },
 // );
 
+export default campersSlice.reducer;
 export const campersReducer = campersSlice.reducer;

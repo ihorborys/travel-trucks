@@ -2,17 +2,28 @@ import styles from "./CampersList.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchCampers, getSelectedCamper } from "../redux/campersOps.js";
-import { selectCampers } from "../redux/campersSlice.js";
+import {
+  selectCampers,
+  selectError,
+  selectLoading,
+} from "../redux/campersSlice.js";
 import Button from "../Button/Button.jsx";
 import EquipmentsList from "../EquipmentsList/EquipmentsList.jsx";
 import CamperInfoList from "../CamperInfoList/CamperInfoList.jsx";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import LoadMoreButton from "../LoadMoreBtn/LoadMoreButton.jsx";
+import Loader from "../Loader/Loader.jsx";
+import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
+import { nanoid } from "nanoid";
 
 const CampersList = () => {
   // const location = useLocation();
 
   const campers = useSelector(selectCampers);
   const navigate = useNavigate();
+
+  const loading = useSelector(selectLoading);
+  const errorMessage = useSelector(selectError);
 
   // const searchedCampers = useSelector(selectFilteredCampers);
 
@@ -25,7 +36,7 @@ const CampersList = () => {
     <ul className={styles.list}>
       {campers &&
         campers.map((camper) => (
-          <li key={camper.id} className={styles.item}>
+          <li key={nanoid()} className={styles.item}>
             <ul className={styles.camperInfoContainer}>
               <li className={styles.camperInfoImage}>
                 <img
@@ -46,6 +57,11 @@ const CampersList = () => {
             </ul>
           </li>
         ))}
+      <div>
+        {loading && <Loader />}
+        {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
+        <LoadMoreButton disabled={loading} />
+      </div>
     </ul>
   );
 };

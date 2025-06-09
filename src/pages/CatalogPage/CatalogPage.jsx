@@ -7,20 +7,26 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchCampers } from "../../components/redux/campersOps.js";
+// import { setPage } from "../redux/campersSlice";
 import {
+  selectCurrentPage,
   selectError,
+  selectLimit,
   selectLoading,
 } from "../../components/redux/campersSlice.js";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage.jsx";
 
 const CatalogPage = () => {
+  const currentPage = useSelector(selectCurrentPage);
+  const limit = useSelector(selectLimit);
+
   const loading = useSelector(selectLoading);
   const errorMessage = useSelector(selectError);
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchCampers());
-  }, [dispatch]);
+    dispatch(fetchCampers({ page: currentPage, limit }));
+  }, [dispatch, currentPage, limit]);
 
   return (
     <div className={styles.catalogContainer}>

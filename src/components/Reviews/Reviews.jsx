@@ -15,9 +15,6 @@ const Reviews = () => {
   const loading = useSelector(selectLoading);
   const errorMessage = useSelector(selectError);
 
-  // const positiveRating = Math.floor(Number(review.reviewer_rating)) || 0;
-  // const negativeRating = 5 - Math.floor(Number(review.reviewer_rating));
-
   return (
     <div className={styles.container}>
       <div className={styles.additionalInfoContainer}>
@@ -32,13 +29,12 @@ const Reviews = () => {
                     </span>
                   </div>
                 </li>
-                <li className={styles.item}>
+                <div className={styles.item}>
                   <span className={styles.name}>{review.reviewer_name}</span>
                   <div className={styles.rating}>
                     {Array.from({
                       length: Math.floor(Number(review.reviewer_rating)),
                     }).map((el) => (
-                      // <ul key={nanoid()} className={styles.ratingIconList}>
                       <li key={nanoid()} className={styles.ratingIconItem}>
                         <svg
                           className={styles.ratingIcon}
@@ -48,11 +44,10 @@ const Reviews = () => {
                           <use href="/icons.svg#icon-rating-pressed"></use>
                         </svg>
                       </li>
-                      // </ul>
                     ))}
                     {Array.from({
                       length: 5 - Math.floor(Number(review.reviewer_rating)),
-                    }).map((el) => (
+                    }).map(() => (
                       <svg
                         key={nanoid()}
                         className={styles.ratingIcon}
@@ -63,7 +58,7 @@ const Reviews = () => {
                       </svg>
                     ))}
                   </div>
-                </li>
+                </div>
               </ul>
               <span className={styles.reviewsDescription}>
                 {review.comment}
