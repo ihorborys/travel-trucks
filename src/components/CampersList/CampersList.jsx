@@ -32,7 +32,7 @@ const CampersList = () => {
                   className={styles.image}
                   src={camper.gallery[0].thumb}
                   width={292}
-                  height={312}
+                  height={320}
                   alt="Camper image"
                 />
               </li>

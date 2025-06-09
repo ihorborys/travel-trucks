@@ -46,6 +46,14 @@
 }
 
 @media screen and (min-width: 768px) {
+    .navigationList {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 0;
+    }
+
     .navigationContainer {
         padding: 0 64px;
     }

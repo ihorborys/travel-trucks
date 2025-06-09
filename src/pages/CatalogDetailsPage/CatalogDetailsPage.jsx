@@ -33,11 +33,7 @@ export const CatalogDetailsPage = () => {
     <div className={styles.catalogDetailsContainer}>
       {camper && (
         <div className={styles.camperDetailsWrapper}>
-          <h2 className={styles.name}>
-            {camper.name.length < 26
-              ? camper.name
-              : camper.name.substring(0, 26) + "..."}
-          </h2>
+          <h2 className={styles.name}>{camper.name}</h2>
           <ul className={styles.ratingLocationWrapper}>
             <svg className={styles.favorite} width={16} height={16}>
               <use href="/icons.svg#icon-rating-pressed"></use>

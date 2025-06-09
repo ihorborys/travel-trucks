@@ -34,7 +34,7 @@ ul, li, p {
 }
 
 .name {
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;*/
 }
 
 .price {
@@ -53,6 +53,7 @@ ul, li, p {
     justify-content: flex-start;
     align-items: center;
     line-height: 1.50;
+    margin-top: 8px;
     margin-bottom: 16px;
 }
 

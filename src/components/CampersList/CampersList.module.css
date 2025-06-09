@@ -24,15 +24,17 @@
 .image {
     object-fit: cover;
     margin-right: 24px;
+    border-radius: 10px;
+    flex-shrink: 0;
 }
 
 .camperInfoWrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
-    width: 524px;
     height: 320px;
+
 }
 
 @media screen and (max-width: 768px) {
