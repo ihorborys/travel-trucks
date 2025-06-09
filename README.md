@@ -20,7 +20,7 @@
 - CSS Modules
 - React Toastify
 
-## Functionality
+## ⚙️ Functionality
 
 - Fetch campers from API with pagination
 - Apply filters to narrow search
