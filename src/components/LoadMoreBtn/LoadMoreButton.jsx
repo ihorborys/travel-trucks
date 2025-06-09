@@ -14,10 +14,11 @@ const LoadMoreButton = () => {
   const handleLoadMore = () => {
     const nextPage = currentPage + 1;
 
-    if (totalPages && nextPage > totalPages) {
+    if (totalPages && nextPage >= totalPages) {
       toast.info("Sorry, no more results...");
       return;
     }
+
     dispatch(setPage(nextPage));
     dispatch(fetchCampers({ page: nextPage, limit }));
   };
