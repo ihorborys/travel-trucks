@@ -1,5 +1,5 @@
 import styles from "./Filters.module.css";
-import { equipments } from "../../utils/constants.js";
+import { equipments, forms } from "../../utils/constants.js";
 
 const Filters = () => {
   const handleclick = (event) => {
@@ -23,6 +23,25 @@ const Filters = () => {
         <h3 className={styles.titleEquipment}>Vehicle equipment</h3>
         <ul className={styles.equipmentList}>
           {equipments.map((equipment) => {
+            return (
+              <li
+                key={equipment.id}
+                className={styles.equipmentItem}
+                onClick={handleclick}
+              >
+                <svg className={styles.equipmentIcon} width={32} height={32}>
+                  <use href={equipment.icon}></use>
+                </svg>
+                <span className={styles.equipmentName}>{equipment.name}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </ul>
+      <ul className={styles.catalogFiltersEquipment}>
+        <h3 className={styles.titleEquipment}>Vehicle type</h3>
+        <ul className={styles.equipmentList}>
+          {forms.map((equipment) => {
             return (
               <li
                 key={equipment.id}
