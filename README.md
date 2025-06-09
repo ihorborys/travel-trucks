@@ -1,4 +1,4 @@
-#### 🚐 Travel Trucks
+# 🚐 Travel Trucks
 
 A responsive web application showcasing camper rentals with filtering and pagination features. Built as a learning
 project during the GoIT Fullstack Developer course.
