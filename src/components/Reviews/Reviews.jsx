@@ -1,50 +1,81 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import styles from "./Reviews.module.css";
 import Loader from "../Loader/Loader.jsx";
 import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
 import { useSelector } from "react-redux";
-import { selectError, selectLoading } from "../redux/campersSlice.js";
-// import {
-//   defaultImg,
-//   getSelectedMovieReviews,
-//   profileUrl,
-// } from "../../api/api.js";
+import {
+  selectCamper,
+  selectError,
+  selectLoading,
+} from "../redux/campersSlice.js";
+import BookForm from "../Form/BookForm.jsx";
+import { nanoid } from "nanoid";
 
 const Reviews = () => {
+  const camper = useSelector(selectCamper);
   const loading = useSelector(selectLoading);
   const errorMessage = useSelector(selectError);
-  // const { movieId } = useParams();
-  // const [movieReviews, setMovieReviews] = useState(null);
-  // const [loading, setLoading] = useState(false);
-  // const [errorMessage, setErrorMessage] = useState("");
-  //
-  // useEffect(() => {
-  //   if (!movieId) return;
-  //
-  //   const fetchReviews = async () => {
-  //     try {
-  //       setLoading(true);
-  //       setErrorMessage("");
-  //
-  //       const movieReviewsData = await getSelectedMovieReviews(movieId);
-  //       if (movieReviewsData.results.length === 0)
-  //         setErrorMessage("We don't have any reviews for this movie...");
-  //
-  //       setMovieReviews(movieReviewsData);
-  //     } catch (error) {
-  //       setErrorMessage(error.message);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //
-  //   fetchReviews();
-  // }, [movieId]);
 
-  // const { results } = movieReviews || {};
+  // const positiveRating = Math.floor(Number(review.reviewer_rating)) || 0;
+  // const negativeRating = 5 - Math.floor(Number(review.reviewer_rating));
+
   return (
-    <div>
+    <div className={styles.container}>
+      <div className={styles.additionalInfoContainer}>
+        <ul className={styles.reviewsList}>
+          {camper.reviews.map((review) => (
+            <li key={nanoid()} className={styles.reviewsItem}>
+              <ul className={styles.list}>
+                <li className={styles.item}>
+                  <div className={styles.icon}>
+                    <span className={styles.iconText}>
+                      {review.reviewer_name[0]}
+                    </span>
+                  </div>
+                </li>
+                <li className={styles.item}>
+                  <span className={styles.name}>{review.reviewer_name}</span>
+                  <div className={styles.rating}>
+                    {Array.from({
+                      length: Math.floor(Number(review.reviewer_rating)),
+                    }).map((el) => (
+                      // <ul key={nanoid()} className={styles.ratingIconList}>
+                      <li key={nanoid()} className={styles.ratingIconItem}>
+                        <svg
+                          className={styles.ratingIcon}
+                          width="16"
+                          height="16"
+                        >
+                          <use href="/icons.svg#icon-rating-pressed"></use>
+                        </svg>
+                      </li>
+                      // </ul>
+                    ))}
+                    {Array.from({
+                      length: 5 - Math.floor(Number(review.reviewer_rating)),
+                    }).map((el) => (
+                      <svg
+                        key={nanoid()}
+                        className={styles.ratingIcon}
+                        width="16"
+                        height="16"
+                      >
+                        <use href="/icons.svg#icon-StarDefault_2"></use>
+                      </svg>
+                    ))}
+                  </div>
+                </li>
+              </ul>
+              <span className={styles.reviewsDescription}>
+                {review.comment}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className={styles.formContainer}>
+        <BookForm />
+      </div>
       {loading && <Loader />}
       {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
     </div>

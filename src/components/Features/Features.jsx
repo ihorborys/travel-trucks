@@ -16,7 +16,7 @@ const Features = () => {
   const errorMessage = useSelector(selectError);
 
   return (
-    <div className={styles.featuresContainer}>
+    <div className={styles.container}>
       <div className={styles.additionalInfoContainer}>
         <EquipmentsList camper={camper} />
         <div className={styles.vehicleDetails}>

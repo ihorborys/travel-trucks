@@ -15,8 +15,6 @@ import { nanoid } from "nanoid";
 
 export const CatalogDetailsPage = () => {
   const { camperId } = useParams();
-  // const [loading, setLoading] = useState(false);
-  // const [errorMessage, setErrorMessage] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -30,18 +28,9 @@ export const CatalogDetailsPage = () => {
     dispatch(getSelectedCamper(camperId));
   }, [dispatch, camperId]);
 
-  // const backLink = useRef(location.state ?? "/catalog");
-  //
-  // const handleClick = () => {
-  //   if (backLink.current) navigate(backLink.current);
-  // };
   console.log(camper);
   return (
     <div className={styles.catalogDetailsContainer}>
-      {/*<button className={styles.buttonBack} onClick={handleClick}>*/}
-      {/*  Go Back*/}
-      {/*</button>*/}
-
       {camper && (
         <div className={styles.camperDetailsWrapper}>
           <h2 className={styles.name}>

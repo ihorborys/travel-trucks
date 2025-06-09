@@ -64,7 +64,7 @@ const BookForm = () => {
             <label className={styles.label} htmlFor="name"></label>
             <Field
               className={styles.field}
-              id="name"
+              id="id_name"
               type="text"
               name="name"
               placeholder="Name*"
@@ -77,7 +77,7 @@ const BookForm = () => {
             <label className={styles.label} htmlFor="email"></label>
             <Field
               className={styles.field}
-              id="name"
+              id="id_email"
               type="text"
               name="email"
               placeholder="Email*"
@@ -101,8 +101,8 @@ const BookForm = () => {
             <label className={styles.label} htmlFor="textarea"></label>
             <Field
               as="textarea"
-              className={styles.field}
-              id="number"
+              className={`${styles.field} ${styles.textarea}`}
+              id="id_textarea"
               type="textarea"
               name="comment"
               placeholder="Comment"

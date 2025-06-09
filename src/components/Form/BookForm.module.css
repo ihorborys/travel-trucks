@@ -46,19 +46,10 @@
     box-sizing: border-box;
 }
 
-.datePickerField {
-    min-width: 100%;
-}
-
-.datePickerField {
-    min-width: 100%;
-}
-
 .textarea {
     height: 118px;
-    resize: vertical;
-    padding: 10px;
-    font-size: 16px;
+    resize: none;
+    padding: 18px;
 }
 
 .buttonWrapper {
