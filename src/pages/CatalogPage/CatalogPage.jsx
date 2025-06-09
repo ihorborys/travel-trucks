@@ -1,13 +1,11 @@
 import styles from "./CatalogPage.module.css";
-import CampersList from "../../components/CampersList/CampersList.jsx";
+import CatalogList from "../../components/CatalogList/CatalogList.jsx";
 import Button from "../../components/Button/Button.jsx";
 import Filters from "../../components/Filters/Filters.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
-import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchCampers } from "../../components/redux/campersOps.js";
-// import { setPage } from "../redux/campersSlice";
 import {
   selectCurrentPage,
   selectError,
@@ -36,7 +34,7 @@ const CatalogPage = () => {
           <Button className={styles.searchBtn}>Search</Button>
         </section>
         <section className={styles.catalogList}>
-          <CampersList />
+          <CatalogList />
         </section>
         {loading && <Loader />}
         {errorMessage && <ErrorMessage errorMessage={errorMessage} />}

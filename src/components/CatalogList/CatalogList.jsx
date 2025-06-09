@@ -1,12 +1,12 @@
-import styles from "./CampersList.module.css";
+import styles from "./CatalogList.module.css";
 import { useSelector } from "react-redux";
 import {
-  selectCampers,
   selectError,
+  selectFilteredCampers,
   selectLoading,
 } from "../redux/campersSlice.js";
 import Button from "../Button/Button.jsx";
-import EquipmentsList from "../EquipmentsList/EquipmentsList.jsx";
+import EquipmentList from "../EquipmentList/EquipmentList.jsx";
 import CamperInfoList from "../CamperInfoList/CamperInfoList.jsx";
 import { useNavigate } from "react-router-dom";
 import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn.jsx";
@@ -14,16 +14,12 @@ import Loader from "../Loader/Loader.jsx";
 import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
 import { nanoid } from "nanoid";
 
-const CampersList = () => {
-  // const location = useLocation();
-
-  const campers = useSelector(selectCampers);
+const CatalogList = () => {
+  const campers = useSelector(selectFilteredCampers);
   const navigate = useNavigate();
 
   const loading = useSelector(selectLoading);
   const errorMessage = useSelector(selectError);
-
-  // const searchedCampers = useSelector(selectFilteredCampers);
 
   const handleClick = (id) => {
     navigate(`/catalog/${id}`);
@@ -47,7 +43,7 @@ const CampersList = () => {
               </li>
               <li className={styles.camperInfoWrapper}>
                 <CamperInfoList camper={camper} />
-                <EquipmentsList camper={camper} />
+                <EquipmentList camper={camper} />
                 <Button handleOnClick={() => handleClick(camper.id)}>
                   Show more
                 </Button>
@@ -64,4 +60,4 @@ const CampersList = () => {
   );
 };
 
-export default CampersList;
+export default CatalogList;

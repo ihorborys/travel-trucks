@@ -25,16 +25,12 @@
     margin-top: 48px;
 }
 
-.catalogFiltersContainer {
-
-}
-
 .catalogFilters {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
+    margin-right: 64px;
 }
 
 .searchBtn {
@@ -78,7 +74,4 @@
         margin-top: 48px;
     }
 
-}
-
-@media screen and (min-width: 1440px) {
 }

@@ -1,21 +1,14 @@
 .catalogDetailsContainer {
     margin: 0 auto;
-    /*max-width: 320px;*/
     padding: 0 32px;
 }
 
 @media screen and (min-width: 768px) {
     .catalogDetailsContainer {
-        /*max-width: 768px;*/
         padding: 0 64px;
     }
 }
 
-@media screen and (min-width: 1440px) {
-    .catalogDetailsContainer {
-        /*max-width: 1440px;*/
-    }
-}
 
 ul, li, p {
     all: unset;
@@ -25,16 +18,11 @@ ul, li, p {
     margin-top: 48px;
 }
 
-
 .name, .price {
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: 1.33;
-}
-
-.name {
-    /*margin-bottom: 8px;*/
 }
 
 .price {

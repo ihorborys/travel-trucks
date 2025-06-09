@@ -1,4 +1,4 @@
-import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import styles from "./CatalogDetailsPage.module.css";
 import CatalogDetailsPageNav from "../../components/Navigation/CatalogDetailsPageNav/CatalogDetailsPageNav.jsx";
@@ -15,8 +15,6 @@ import { nanoid } from "nanoid";
 
 export const CatalogDetailsPage = () => {
   const { camperId } = useParams();
-  const location = useLocation();
-  const navigate = useNavigate();
 
   const camper = useSelector(selectCamper);
   const loading = useSelector(selectLoading);
@@ -28,7 +26,6 @@ export const CatalogDetailsPage = () => {
     dispatch(getSelectedCamper(camperId));
   }, [dispatch, camperId]);
 
-  console.log(camper);
   return (
     <div className={styles.catalogDetailsContainer}>
       {camper && (
