@@ -41,17 +41,17 @@ const Filters = () => {
       <ul className={styles.catalogFiltersEquipment}>
         <h3 className={styles.titleEquipment}>Vehicle type</h3>
         <ul className={styles.equipmentList}>
-          {forms.map((equipment) => {
+          {forms.map((form) => {
             return (
               <li
-                key={equipment.id}
+                key={form.id}
                 className={styles.equipmentItem}
                 onClick={handleclick}
               >
                 <svg className={styles.equipmentIcon} width={32} height={32}>
-                  <use href={equipment.icon}></use>
+                  <use href={form.icon}></use>
                 </svg>
-                <span className={styles.equipmentName}>{equipment.name}</span>
+                <span className={styles.equipmentName}>{form.name}</span>
               </li>
             );
           })}
