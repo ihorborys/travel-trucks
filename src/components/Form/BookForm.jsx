@@ -3,9 +3,10 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import Button from "../Button/Button.jsx";
 import "react-datepicker/dist/react-datepicker.css";
-
 import DatePicker from "react-datepicker";
 import { useField, useFormikContext } from "formik";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const DatePickerField = ({ ...props }) => {
   const { setFieldValue } = useFormikContext();
@@ -38,8 +39,8 @@ const FeedbackSchema = Yup.object().shape({
 const BookForm = () => {
   const handleSubmit = (values, { resetForm }) => {
     console.log("Form data:", values);
-    // Тут можеш відправляти дані на сервер
-    resetForm(); // Очищення форми
+    toast.success("Booking successful!");
+    resetForm();
   };
   return (
     <div className={styles.bookFormWrapper}>
@@ -120,6 +121,7 @@ const BookForm = () => {
           </Form>
         </div>
       </Formik>
+      <ToastContainer position="top-center" autoClose={3000} />
     </div>
   );
 };
