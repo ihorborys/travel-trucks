@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCampers } from "../redux/campersOps.js";
 import { setPage } from "../redux/campersSlice.js";
-import styles from "./LoadMoreButton.module.css";
+import styles from "./LoadMoreBtn.module.css";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 
-const LoadMoreButton = () => {
+const LoadMoreBtn = () => {
   const dispatch = useDispatch();
   const { currentPage, totalPages, limit } = useSelector(
     (state) => state.campers,
@@ -37,4 +37,4 @@ const LoadMoreButton = () => {
   );
 };
 
-export default LoadMoreButton;
+export default LoadMoreBtn;

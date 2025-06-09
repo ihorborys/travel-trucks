@@ -1,7 +1,5 @@
 import styles from "./CampersList.module.css";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { fetchCampers, getSelectedCamper } from "../redux/campersOps.js";
+import { useSelector } from "react-redux";
 import {
   selectCampers,
   selectError,
@@ -10,8 +8,8 @@ import {
 import Button from "../Button/Button.jsx";
 import EquipmentsList from "../EquipmentsList/EquipmentsList.jsx";
 import CamperInfoList from "../CamperInfoList/CamperInfoList.jsx";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import LoadMoreButton from "../LoadMoreBtn/LoadMoreButton.jsx";
+import { useNavigate } from "react-router-dom";
+import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn.jsx";
 import Loader from "../Loader/Loader.jsx";
 import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
 import { nanoid } from "nanoid";
@@ -60,7 +58,7 @@ const CampersList = () => {
       <div>
         {loading && <Loader />}
         {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
-        <LoadMoreButton disabled={loading} />
+        <LoadMoreBtn disabled={loading} />
       </div>
     </ul>
   );

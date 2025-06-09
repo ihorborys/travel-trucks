@@ -1,4 +1,5 @@
 import styles from "./CamperInfoList.module.css";
+import FavoriteBtn from "../FavoriteBtn/FavoriteBtn.jsx";
 
 const CamperInfoList = ({ camper }) => {
   return (
@@ -11,9 +12,7 @@ const CamperInfoList = ({ camper }) => {
         </h2>
         <div className={styles.priceFavorite}>
           <li className={styles.price}>{`€${camper.price.toFixed(2)}`}</li>
-          <svg className={styles.favorite} width={26} height={24}>
-            <use href="./icons.svg#icon-favorite-default"></use>
-          </svg>
+          <FavoriteBtn camperId={camper.id} />
         </div>
       </ul>
       <ul className={styles.ratingLocationWrapper}>

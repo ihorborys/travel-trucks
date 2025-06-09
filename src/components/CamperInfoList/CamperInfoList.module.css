@@ -31,6 +31,10 @@
     line-height: 1.50;
 }
 
+.favoriteBtn {
+    cursor: pointer;
+}
+
 .favorite {
     margin-right: 4px;
 }
