@@ -50,15 +50,15 @@ export const CatalogDetailsPage = () => {
               : camper.name.substring(0, 26) + "..."}
           </h2>
           <ul className={styles.ratingLocationWrapper}>
-            <svg className={styles.favoritex} width={16} height={16}>
-              <use href="./icons.svg#icon-rating-pressed"></use>
+            <svg className={styles.favorite} width={16} height={16}>
+              <use href="/icons.svg#icon-rating-pressed"></use>
             </svg>
             <li className={styles.rating}>{camper.rating.toFixed(1)}</li>
             <li className={styles.reviews}>
               {`(${camper.reviews.length} Reviews)`}
             </li>
             <svg className={styles.map} width={16} height={16}>
-              <use href="./icons.svg#icon-map_active"></use>
+              <use href="/icons.svg#icon-map_active"></use>
             </svg>
             <li className={styles.location}>{camper.location}</li>
           </ul>
