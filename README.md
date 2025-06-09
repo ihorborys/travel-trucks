@@ -1,9 +1,9 @@
-🚐 Travel Trucks
+#### 🚐 Travel Trucks
 
 A responsive web application showcasing camper rentals with filtering and pagination features. Built as a learning
 project during the GoIT Fullstack Developer course.
 
-🌟 Features
+## 🌟 Features
 
 - Camper catalog with images, details, and pricing
 - Filtering by location, equipment, and vehicle type
@@ -12,7 +12,7 @@ project during the GoIT Fullstack Developer course.
 - Responsive design for all screen sizes
 - Custom loader and toast notifications
 
-🛠 Tech Stack
+## 🛠 Tech Stack
 
 - React
 - Redux Toolkit
@@ -21,7 +21,7 @@ project during the GoIT Fullstack Developer course.
 - CSS Modules
 - React Toastify
 
-🔧 Functionality
+## Functionality
 
 - Fetch campers from API with pagination
 - Apply filters to narrow search
@@ -29,7 +29,7 @@ project during the GoIT Fullstack Developer course.
 - Display loader while fetching
 - Toast message when no more results are available
 
-🚀 Deployment
+## 🚀 Deployment
 
 Hosted on Vercel:
 🔗 travel-trucks-iota-eight.vercel.app
