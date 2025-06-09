@@ -1,7 +1,7 @@
-import styles from "./EquipmentsList.module.css";
+import styles from "./EquipmentList.module.css";
 import { equipments } from "../../utils/constants.js";
 
-const EquipmentsList = ({ camper }) => {
+const EquipmentList = ({ camper }) => {
   return (
     <ul className={styles.equipmentsWrapper}>
       {equipments.map((equipment) => {
@@ -23,4 +23,4 @@ const EquipmentsList = ({ camper }) => {
     </ul>
   );
 };
-export default EquipmentsList;
+export default EquipmentList;

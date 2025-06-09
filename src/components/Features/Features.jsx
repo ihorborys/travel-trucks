@@ -7,8 +7,8 @@ import {
   selectError,
   selectLoading,
 } from "../redux/campersSlice.js";
-import EquipmentsList from "../EquipmentsList/EquipmentsList.jsx";
-import BookForm from "../Form/BookForm.jsx";
+import EquipmentList from "../EquipmentList/EquipmentList.jsx";
+import BookForm from "../BookForm/BookForm.jsx";
 
 const Features = () => {
   const camper = useSelector(selectCamper);
@@ -18,7 +18,7 @@ const Features = () => {
   return (
     <div className={styles.container}>
       <div className={styles.additionalInfoContainer}>
-        <EquipmentsList camper={camper} />
+        <EquipmentList camper={camper} />
         <div className={styles.vehicleDetails}>
           <h4 className={styles.vehicleDetailsTitle}>Vehicle details</h4>
           <ul className={styles.vehicleDetailsList}>

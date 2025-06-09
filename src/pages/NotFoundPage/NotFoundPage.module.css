@@ -15,12 +15,12 @@
     font-size: 28px;
     font-weight: bold;
     text-align: center;
-    color: teal;
+    color: var(--colors-button-hover);
     margin-bottom: 10px;
 }
 
 .link:hover {
-    color: teal;
+    color: var(--colors-button-hover);
     text-decoration: underline 1px;
     opacity: 0.6;
 }

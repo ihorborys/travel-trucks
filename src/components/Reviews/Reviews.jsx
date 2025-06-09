@@ -7,7 +7,7 @@ import {
   selectError,
   selectLoading,
 } from "../redux/campersSlice.js";
-import BookForm from "../Form/BookForm.jsx";
+import BookForm from "../BookForm/BookForm.jsx";
 import { nanoid } from "nanoid";
 
 const Reviews = () => {
@@ -34,7 +34,7 @@ const Reviews = () => {
                   <div className={styles.rating}>
                     {Array.from({
                       length: Math.floor(Number(review.reviewer_rating)),
-                    }).map((el) => (
+                    }).map(() => (
                       <li key={nanoid()} className={styles.ratingIconItem}>
                         <svg
                           className={styles.ratingIcon}
