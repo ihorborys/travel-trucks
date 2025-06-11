@@ -35,30 +35,26 @@
     line-height: 1.5;
 }
 
-.titleEquipment {
-    margin-top: 32px;
-}
-
 .titleEquipment, .titleType {
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: 1.2;
+    margin: 32px 0 24px 0;
 }
 
-.titleEquipment {
-    margin-bottom: 24px;
-}
-
-.equipmentList {
+.equipmentList, .typeList {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 12px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
     padding-top: 24px;
     border-top: 1px solid var(--colors-white-1);
+}
+
+.typeList {
+    margin-bottom: 40px;
 }
 
 .equipmentItem {
@@ -86,57 +82,3 @@
     letter-spacing: -0.08px;
     text-align: center;
 }
-
-
-/*.filters {*/
-/*    padding: 20px;*/
-/*}*/
-
-/*.filterSection {*/
-/*    margin-bottom: 20px;*/
-/*}*/
-
-/*label {*/
-/*    font-weight: bold;*/
-/*    margin-bottom: 10px;*/
-/*    display: block;*/
-/*}*/
-
-/*input {*/
-/*    width: 100%;*/
-/*    padding: 10px;*/
-/*    border: 1px solid #ccc;*/
-/*    border-radius: 5px;*/
-/*}*/
-
-/*.vehicleTypes,*/
-/*.equipmentOptions {*/
-/*    display: flex;*/
-/*    gap: 10px;*/
-/*}*/
-
-/*.vehicleTypeButton,*/
-/*.equipmentButton {*/
-/*    padding: 10px;*/
-/*    border: 1px solid #ccc;*/
-/*    border-radius: 5px;*/
-/*    background: #fff;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.vehicleTypeButton.selected,*/
-/*.equipmentButton.selected {*/
-/*    background: #007bff;*/
-/*    color: white;*/
-/*    border-color: #007bff;*/
-/*}*/
-
-/*.searchButton {*/
-/*    padding: 10px 20px;*/
-/*    border: none;*/
-/*    border-radius: 5px;*/
-/*    background: #ff4d4d;*/
-/*    color: white;*/
-/*    cursor: pointer;*/
-/*    margin-right: 10px;*/
-/*}*/

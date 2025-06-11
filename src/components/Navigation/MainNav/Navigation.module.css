@@ -65,10 +65,8 @@
 
 @media screen and (min-width: 1440px) {
     .navigationLogo {
-        padding-right: 450px;
     }
 
     .navigationList {
-        justify-content: flex-start;
     }
 }

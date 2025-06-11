@@ -1,6 +1,5 @@
 import styles from "./CatalogPage.module.css";
 import CatalogList from "../../components/CatalogList/CatalogList.jsx";
-import Button from "../../components/Button/Button.jsx";
 import Filters from "../../components/Filters/Filters.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
 import { useDispatch, useSelector } from "react-redux";
@@ -31,7 +30,6 @@ const CatalogPage = () => {
       <div className={styles.catalogPageWrapper}>
         <section className={styles.catalogFilters}>
           <Filters />
-          <Button className={styles.searchBtn}>Search</Button>
         </section>
         <section className={styles.catalogList}>
           <CatalogList />

@@ -1,5 +1,6 @@
 import styles from "./Filters.module.css";
 import { equipments, forms } from "../../utils/constants.js";
+import Button from "../Button/Button.jsx";
 
 const Filters = () => {
   const handleclick = (event) => {
@@ -9,17 +10,17 @@ const Filters = () => {
 
   return (
     <div className={styles.catalogFiltersContainer}>
-      <ul className={styles.catalogFiltersLocation}>
+      <div className={styles.catalogFiltersLocation}>
         <h3 className={styles.titleLocation}>Location</h3>
-        <li className={styles.catalogFiltersLocationItem}>
+        <div className={styles.catalogFiltersLocationItem}>
           <svg className={styles.iconLocation} width={20} height={20}>
             <use href="./icons.svg#icon-map_active"></use>
           </svg>
           <span>Kyiv, Ukraine</span>
-        </li>
-      </ul>
+        </div>
+      </div>
       <h3 className={styles.titleFilters}>Filters</h3>
-      <ul className={styles.catalogFiltersEquipment}>
+      <div className={styles.catalogFiltersEquipment}>
         <h3 className={styles.titleEquipment}>Vehicle equipment</h3>
         <ul className={styles.equipmentList}>
           {equipments.map((equipment) => {
@@ -37,10 +38,10 @@ const Filters = () => {
             );
           })}
         </ul>
-      </ul>
-      <ul className={styles.catalogFiltersEquipment}>
-        <h3 className={styles.titleEquipment}>Vehicle type</h3>
-        <ul className={styles.equipmentList}>
+      </div>
+      <div className={styles.catalogFiltersType}>
+        <h3 className={styles.titleType}>Vehicle type</h3>
+        <ul className={styles.typeList}>
           {forms.map((form) => {
             return (
               <li
@@ -56,7 +57,8 @@ const Filters = () => {
             );
           })}
         </ul>
-      </ul>
+      </div>
+      <Button className={styles.searchBtn}>Search</Button>
     </div>
   );
 };
