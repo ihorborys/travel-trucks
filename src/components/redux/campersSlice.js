@@ -38,7 +38,7 @@ const campersSlice = createSlice({
         state.totalPages = Math.ceil(totalItems / state.limit);
         state.loading = false;
       })
-      .addCase(fetchCampers.rejected, (state, { payload }) => {
+      .addCase(fetchCampers.rejected, (state) => {
         // state.error = payload;
         state.items = [];
         state.error = `Sorry, can't find anything...`;

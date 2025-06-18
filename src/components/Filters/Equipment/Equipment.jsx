@@ -33,7 +33,7 @@ const Equipment = () => {
             <svg className={styles.equipmentIcon} width={32} height={32}>
               <use href={equipment.icon}></use>
             </svg>
-            <span className={styles.equipmentName}>{equipment.name}</span>
+            <span className={styles.equipmentName}>{equipment.realName}</span>
           </li>
         ))}
       </ul>

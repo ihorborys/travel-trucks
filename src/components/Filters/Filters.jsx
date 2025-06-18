@@ -5,14 +5,8 @@ import LocationFilter from "./Location/Location.jsx";
 import Equipment from "./Equipment/Equipment.jsx";
 import { fetchCampers } from "../redux/campersOps.js";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 import { selectFilters } from "../redux/filtersSlice.js";
-import {
-  selectCurrentPage,
-  selectError,
-  selectLimit,
-  selectLoading,
-} from "../redux/campersSlice.js";
+import { selectCurrentPage, selectLimit } from "../redux/campersSlice.js";
 
 const Filters = () => {
   const currentPage = useSelector(selectCurrentPage);

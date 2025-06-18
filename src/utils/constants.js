@@ -69,46 +69,55 @@ export const EQUIPMENTS_FILTER = [
   {
     id: 1,
     name: "AC",
+    realName: "AC",
     icon: "/icons.svg#icon-wind_20",
   },
   {
     id: 2,
     name: "TV",
+    realName: "TV",
     icon: "/icons.svg#icon-tv_32",
   },
   {
     id: 3,
     name: "bathroom",
+    realName: "Bathroom",
     icon: "/icons.svg#icon-ph_shower_20",
   },
   {
     id: 4,
     name: "gas",
+    realName: "Gas",
     icon: "/icons.svg#icon-gas",
   },
   {
     id: 5,
     name: "kitchen",
+    realName: "Kitchen",
     icon: "/icons.svg#icon-kitchen_20",
   },
   {
     id: 6,
     name: "microwave",
+    realName: "Microwave",
     icon: "/icons.svg#icon-microwave",
   },
   {
     id: 7,
     name: "radio",
+    realName: "Radio",
     icon: "/icons.svg#icon-ui-radios_20",
   },
   {
     id: 8,
     name: "refrigerator",
+    realName: "Refrigerator",
     icon: "/icons.svg#icon-solar_fridge-outline_20",
   },
   {
     id: 9,
     name: "water",
+    realName: "Water",
     icon: "/icons.svg#icon-water",
   },
 ];

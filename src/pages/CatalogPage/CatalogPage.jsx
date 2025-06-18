@@ -7,18 +7,12 @@ import { useEffect } from "react";
 import { fetchCampers } from "../../components/redux/campersOps.js";
 import {
   selectCurrentPage,
-  selectError,
   selectLimit,
-  selectLoading,
 } from "../../components/redux/campersSlice.js";
-import ErrorMessage from "../../components/ErrorMessage/ErrorMessage.jsx";
 
 const CatalogPage = () => {
   const currentPage = useSelector(selectCurrentPage);
   const limit = useSelector(selectLimit);
-
-  const loading = useSelector(selectLoading);
-  const errorMessage = useSelector(selectError);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -34,8 +28,6 @@ const CatalogPage = () => {
         <section className={styles.catalogList}>
           <CatalogList />
         </section>
-        {loading && <Loader />}
-        {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
       </div>
     </div>
   );
