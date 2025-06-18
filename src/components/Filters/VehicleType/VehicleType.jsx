@@ -27,7 +27,7 @@ const VehicleType = () => {
               <svg className={styles.typeIcon} width={32} height={32}>
                 <use href={type.icon}></use>
               </svg>
-              <span className={styles.typeName}>{type.name}</span>
+              <span className={styles.typeName}>{type.realName}</span>
             </button>
           );
         })}

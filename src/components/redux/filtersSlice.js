@@ -62,7 +62,7 @@ const filtersSlice = createSlice({
             state.location = action.payload;
         },
 
-        // --- Тип транспорту: radio
+        // --- Обладнання: toggle кнопки
         setVehicleType: (state, action) => {
             state.vehicleType = action.payload;
         },
@@ -86,6 +86,8 @@ const filtersSlice = createSlice({
     },
 });
 
+
+export const selectFilters = (state) => state.filters;
 export const selectLocation = (state) => state.filters.location;
 export const selectEquipment = (state) => state.filters.equipment;
 export const selectVehicleType = (state) => state.filters.vehicleType;
@@ -93,6 +95,7 @@ export const selectVehicleType = (state) => state.filters.vehicleType;
 
 export const {setLocation, setVehicleType, toggleEquipment, resetFilters} =
     filtersSlice.actions;
+
 export const filtersReducer = filtersSlice.reducer;
 
 // export default filtersSlice.reducer;

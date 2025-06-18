@@ -1,16 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
 import { LOCATIONS } from "../../../utils/constants.js";
-import { setLocation } from "../../redux/filtersSlice.js";
+import { selectLocation, setLocation } from "../../redux/filtersSlice.js";
 import styles from "../Filters.module.css";
 
 const LocationFilter = () => {
   const dispatch = useDispatch();
-  const selected = useSelector((state) => state.filters.location);
+  const selectedLocation = useSelector(selectLocation);
 
   const handleChange = (e) => {
     dispatch(setLocation(e.target.value));
   };
-  console.log(selected);
+  console.log(selectedLocation);
   return (
     // <div className={styles.catalogFiltersLocation}>
     //     <h3 className={styles.titleLocation}>Location</h3>
@@ -26,7 +26,7 @@ const LocationFilter = () => {
       <label htmlFor="location-select">Location:</label>
       <select
         id="location-select"
-        value={selected}
+        value={selectedLocation}
         onChange={handleChange}
         style={{
           padding: "8px",

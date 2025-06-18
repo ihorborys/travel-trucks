@@ -116,17 +116,20 @@ export const EQUIPMENTS_FILTER = [
 export const TYPES = [
   {
     id: 1,
-    name: "Van",
+    name: "panelTruck",
+    realName: "Van",
     icon: "/icons.svg#icon-bi_grid-1x2_32",
   },
   {
     id: 2,
-    name: "Fully Integrated",
+    name: "fullyIntegrated",
+    realName: "Fully Integrated",
     icon: "/icons.svg#icon-bi_grid-3x3-gap_32",
   },
   {
     id: 3,
     name: "alcove",
+    realName: "Alcove",
     icon: "/icons.svg#icon-bi_grid-3x3-gap_32",
   },
 ];
