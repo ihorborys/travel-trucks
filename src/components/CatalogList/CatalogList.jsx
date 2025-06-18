@@ -1,8 +1,8 @@
 import styles from "./CatalogList.module.css";
 import { useSelector } from "react-redux";
 import {
+  selectCampers,
   selectError,
-  selectFilteredCampers,
   selectLoading,
 } from "../redux/campersSlice.js";
 import Button from "../Button/Button.jsx";
@@ -15,7 +15,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage.jsx";
 import { nanoid } from "nanoid";
 
 const CatalogList = () => {
-  const campers = useSelector(selectFilteredCampers);
+  const campers = useSelector(selectCampers);
   const navigate = useNavigate();
 
   const loading = useSelector(selectLoading);

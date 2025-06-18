@@ -28,17 +28,17 @@ export const getSelectedCamper = createAsyncThunk(
   },
 );
 
-export const fetchFilteredCampers = createAsyncThunk(
-  "campers/fetch-all",
-  async (params = { limit: 10, page: 1 }, thunkAPI) => {
-    try {
-      const { limit, page } = params;
-      const { data } = await axios.get(
-        `campers?page=${page}&limit=${limit}&gas=true&AC=true&TV=true`,
-      );
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
-  },
-);
+// export const fetchFilteredCampers = createAsyncThunk(
+//   "campers/fetch-all",
+//   async (params = { limit: 10, page: 1 }, thunkAPI) => {
+//     try {
+//       const { limit, page } = params;
+//       const { data } = await axios.get(
+//         `campers?page=${page}&limit=${limit}&gas=true&AC=true&TV=true`,
+//       );
+//       return data;
+//     } catch (error) {
+//       return thunkAPI.rejectWithValue(error.message);
+//     }
+//   },
+// );

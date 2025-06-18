@@ -49,8 +49,8 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
     location: "", // select
-    vehicleType: "", // radio
     equipment: [], // toggle-кнопки (як checkbox-и)
+    vehicleType: "", // radio
 };
 
 const filtersSlice = createSlice({
@@ -85,6 +85,11 @@ const filtersSlice = createSlice({
         },
     },
 });
+
+export const selectLocation = (state) => state.filters.location;
+export const selectEquipment = (state) => state.filters.equipment;
+export const selectVehicleType = (state) => state.filters.vehicleType;
+
 
 export const {setLocation, setVehicleType, toggleEquipment, resetFilters} =
     filtersSlice.actions;

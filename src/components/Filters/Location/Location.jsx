@@ -10,7 +10,7 @@ const LocationFilter = () => {
   const handleChange = (e) => {
     dispatch(setLocation(e.target.value));
   };
-
+  console.log(selected);
   return (
     // <div className={styles.catalogFiltersLocation}>
     //     <h3 className={styles.titleLocation}>Location</h3>

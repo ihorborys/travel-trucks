@@ -1,11 +1,11 @@
-.catalogFiltersType {
+.catalogFiltersEquipment {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.titleType {
+.titleEquipment {
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -13,7 +13,7 @@
     margin: 32px 0 24px 0;
 }
 
-.typeList {
+.equipmentList {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -21,10 +21,9 @@
     flex-wrap: wrap;
     padding-top: 24px;
     border-top: 1px solid var(--colors-white-1);
-    margin-bottom: 40px;
 }
 
-.typeItem {
+.equipmentItem {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,13 +38,19 @@
     cursor: pointer;
 }
 
-.typeName {
+.equipmentName {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: -0.08px;
     text-align: center;
 }
 
+.equipmentCheckbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .active {
-    border: 1px solid var(--colors-button);
+    border: 1px solid var(--colors-button); /* активна рамка */
 }
