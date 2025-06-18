@@ -1,10 +1,10 @@
 import styles from "./EquipmentList.module.css";
-import { equipments } from "../../utils/constants.js";
+import { EQUIPMENTS } from "../../utils/constants.js";
 
 const EquipmentList = ({ camper }) => {
   return (
     <ul className={styles.equipmentsWrapper}>
-      {equipments.map((equipment) => {
+      {EQUIPMENTS.map((equipment) => {
         if (camper[equipment.name]) {
           return (
             <li key={equipment.id} className={styles.equipments}>

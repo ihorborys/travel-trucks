@@ -1,4 +1,13 @@
-export const equipments = [
+export const LOCATIONS = [
+  "Kyiv",
+  "Lviv",
+  "Odesa",
+  "Kharkiv",
+  "Dnipro",
+  "Poltava",
+];
+
+export const EQUIPMENTS = [
   {
     id: 1,
     name: "AC",
@@ -56,7 +65,7 @@ export const equipments = [
   },
 ];
 
-export const forms = [
+export const TYPES = [
   {
     id: 1,
     name: "Van",
