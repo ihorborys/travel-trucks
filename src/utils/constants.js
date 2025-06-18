@@ -57,12 +57,12 @@ export const EQUIPMENTS = [
 ];
 
 export const LOCATIONS = [
-  "Kyiv",
-  "Lviv",
-  "Odesa",
-  "Kharkiv",
-  "Dnipro",
-  "Poltava",
+  "Ukraine, Kyiv",
+  "Ukraine, Lviv",
+  "Ukraine, Odesa",
+  "Ukraine, Kharkiv",
+  "Ukraine, Dnipro",
+  "Ukraine, Poltava",
 ];
 
 export const EQUIPMENTS_FILTER = [

@@ -26,6 +26,7 @@ const campersSlice = createSlice({
       })
       .addCase(fetchCampers.fulfilled, (state, { payload }) => {
         state.error = null;
+
         const totalItems = payload.total;
 
         if (state.currentPage === 1) {
@@ -38,7 +39,9 @@ const campersSlice = createSlice({
         state.loading = false;
       })
       .addCase(fetchCampers.rejected, (state, { payload }) => {
-        state.error = payload;
+        // state.error = payload;
+        state.items = [];
+        state.error = `Sorry, can't find anything...`;
         state.loading = false;
       })
       .addCase(getSelectedCamper.pending, (state) => {
